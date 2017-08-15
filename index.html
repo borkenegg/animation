@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -65,17 +65,18 @@
     var share = getObj("content");
 
     share.addEventListener("mouseout",function(){
-        moving(-10,-150);
+        moving(this,-10,-150);
     },true);
 
     share.addEventListener("mouseover",function(){
-        moving(10,0);
+        moving(this,10,0);
     },true);
 
-    share.timer=null;
-    function moving(speed,end){
+    var timer=null;
+    function moving(obj,speed,end){
         clearInterval(share.timer);
-        share.timer=setInterval(function(){
+	obj.timer=null;
+        obj.timer=setInterval(function(){
             var left_val=getStyle(share,"left");
             if(left_val<end){
                 if(left_val<end){
