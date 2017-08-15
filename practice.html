@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>练习</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #content{
+            width: 400px;
+            height: 80px;
+            text-align: center;
+            background: darkgray;
+            border: 1px solid darkgray;
+            position: absolute;
+            top: -60px;
+            left: 40%;
+        }
+        #title{
+            width: 100px;
+            height: 20px;
+            margin:8px 150px;
+            float: left;
+        }
+        #nav{
+            list-style: none;
+            line-height: 50px;
+
+        }
+        #nav>li{
+           margin-left: 25px;
+           float: left;
+           cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    
+    <ul id="nav">
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+        <li>首页</li>
+    </ul>
+    <div id="title">悬浮出现菜单</div>
+</div>
+
+<script>
+    function getId(id){
+        return document.getElementById(id)?document.getElementById(id):null;
+    }
+    function getStyle(obj,attr){
+        if(document.all){
+            return parseInt(obj.currentStyle[attr]);
+        }
+        else{
+            return parseInt(getComputedStyle(obj)[attr]);
+        }
+    }
+    var nav=getId("content");
+    nav.addEventListener("mouseover",function(){
+        moving();
+    },true);
+
+    var timer=null;
+    function moving(){
+        clearInterval(timer1);
+        clearInterval(timer);
+        timer=setInterval(function() {
+            var top_val = getStyle(nav, "top");
+            if (top_val < 0) {
+                top_val += 5;
+            }else{
+                clearInterval(timer);
+            }
+            nav.style.top=top_val+"px";
+        },17);
+    }
+    nav.addEventListener("mouseout",function(){
+        moving1();
+    },true);
+
+    var timer1=null;
+    function moving1(){
+        clearInterval(timer);
+        clearInterval(timer1);
+        timer1=setInterval(function() {
+            var top_val = getStyle(nav, "top");
+            if (top_val >-60) {
+                top_val -= 5;
+            }else{
+                clearInterval(timer1);
+            }
+            nav.style.top=top_val+"px";
+        },17);
+    }
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
