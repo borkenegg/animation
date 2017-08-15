@@ -64,49 +64,52 @@
     }
     var share = getObj("content");
 
-
+    share.addEventListener("mouseout",function(){
+        moving(-10,-150);
+    },true);
 
     share.addEventListener("mouseover",function(){
-        moving();
+        moving(10,0);
     },true);
 
-    var timer=null;
-    function moving(){
-        clearInterval(timer1);
-        clearInterval(timer);
-        timer=setInterval(function(){
+    share.timer=null;
+    function moving(speed,end){
+        clearInterval(share.timer);
+        share.timer=setInterval(function(){
             var left_val=getStyle(share,"left");
-            if(left_val<0){
-                left_val+=10;
+            if(left_val<end){
+                if(left_val<end){
+                    left_val+=speed;
+                }
             }else{
-                clearInterval(timer);
+                if(left_val>end){
+                    left_val+=speed;
+                }
             }
+
             share.style.left=left_val+"px";
-            console.log(222)
         },17)
     }
 
 
-    share.addEventListener("mouseout",function(){
-        moving1();
-    },true);
-    var timer1=null;
-    function moving1(){
-        clearInterval(timer);
-        clearInterval(timer1);
-        timer1=setInterval(function(){
-            var left_val=getStyle(share,"left");
-            if(left_val>-150){
-                left_val-=10;
 
-            }else{
-                clearInterval(timer1);
-            }
-            share.style.left=left_val+"px";
-            console.log(111)
-
-        },17)
-    }
+//    var timer1=null;
+//    function moving1(){
+//        clearInterval(timer);
+//        clearInterval(timer1);
+//        timer1=setInterval(function(){
+//            var left_val=getStyle(share,"left");
+//            if(left_val>-150){
+//                left_val-=10;
+//
+//            }else{
+//                clearInterval(timer1);
+//            }
+//            share.style.left=left_val+"px";
+//            console.log(111)
+//
+//        },17)
+//    }
 
 </script>
 
