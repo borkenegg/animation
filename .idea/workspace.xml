@@ -39,8 +39,8 @@
       <file leaf-file-name="practice.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/practice.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.526699" vertical-offset="2476" max-vertical-offset="3300">
-              <caret line="97" column="13" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.27184466" vertical-offset="1276" max-vertical-offset="3450">
+              <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -65,8 +65,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="314" />
-    <option name="y" value="184" />
+    <option name="x" value="486" />
+    <option name="y" value="40" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -209,7 +209,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="314" y="184" width="1400" height="1000" extended-state="0" />
+    <frame x="486" y="40" width="1400" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="更改" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -263,8 +263,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/practice.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.526699" vertical-offset="2476" max-vertical-offset="3300">
-          <caret line="97" column="13" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.27184466" vertical-offset="1276" max-vertical-offset="3450">
+          <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
           <folding />
         </state>
       </provider>
